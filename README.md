@@ -1,2 +1,6 @@
-# joaopedro_atividade-banco-de-dados
- Atividades de banco de dados
+# Atividades de banco de dados
+
+## Modelo Conceitual
+
+![Entidade, atributos e relacionamento](modelagem-conseitual/modelo-conceitual.png)
+
