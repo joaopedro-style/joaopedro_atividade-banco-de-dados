@@ -6,4 +6,4 @@
 
 ## Modelo Lógico
 
-![Tables, colunas e relacionamento] (modelagem-logica/)
+![Tables, colunas e relacionamento](modelagem-logica/modelo-logico.png)
