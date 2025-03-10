@@ -4,3 +4,6 @@
 
 ![Entidade, atributos e relacionamento](modelagem-conseitual/modelo-conceitual.png)
 
+## Modelo Lógico
+
+![Tables, colunas e relacionamento] (modelagem-logica/)
