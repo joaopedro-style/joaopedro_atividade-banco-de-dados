@@ -13,7 +13,7 @@ CREATE TABLE cursos(
     id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     titulo VARCHAR(45) NOT NULL,
     carga_horaria INT NOT NULL,
-    professores_id INT NOT NULL
+    professores_id INT NULL
 );
 ```
 
@@ -22,8 +22,8 @@ CREATE TABLE alunos(
     id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(45) NOT NULL,
     data_de_nacimento DATE NOT NULL,
-    primeira_nota INT NOT NULL,
-    segunda_nota INT NOT NULL,
+    primeira_nota DECIMAL(4,2) NOT NULL,
+    segunda_nota DECIMAL(4,2) NOT NULL,
     cursos_id INT NOT NULL
 );
 ```
@@ -32,7 +32,7 @@ CREATE TABLE alunos(
 CREATE TABLE professores(
     id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(45) NOT NULL,
-    area_de_atuacao ENUM('design, desenvolvimento, infra') NOT NULL,
+    area_de_atuacao ENUM('design', 'desenvolvimento', 'infra') NOT NULL,
     cursos_id INT NOT NULL
 );
 ```
