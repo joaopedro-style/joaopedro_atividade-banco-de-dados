@@ -198,4 +198,14 @@ JOIN cursos ON alunos.cursos_id = cursos.id
 JOIN professores ON cursos.professores_id = professores.id;
 ```
 
+## parte 9
+```sql
+SELECT cursos.titulo AS cursos,
+       COUNT(alunos.id) AS quantidades_de_alunos
+FROM cursos
+LEFT JOIN alunos ON alunos.cursos_id = cursos.id
+GROUP BY cursos.id
+ORDER BY quantidades_de_alunos DESC;
+```
+
 
