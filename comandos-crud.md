@@ -181,4 +181,11 @@ SELECT alunos.nome, cursos.titulo,cursos.carga_horaria FROM alunos
 JOIN cursos ON alunos.cursos_id = cursos.id;
 ```
 
+## parte 7
+```sql
+SELECT professores.nome, cursos.titulo FROM professores
+JOIN cursos ON professores.cursos_id = cursos.id
+ORDER BY professores.nome;
+```
+
 
