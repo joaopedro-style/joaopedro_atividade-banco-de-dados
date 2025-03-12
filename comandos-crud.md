@@ -154,5 +154,15 @@ SELECT nome, ROUND((AVG(primeira_nota + segunda_nota) / 2), 2) AS "Média das no
 GROUP BY nome;
 ```
 
+```sql
+SELECT titulo, carga_horaria, (carga_horaria * 0.25) AS "Limite de Faltas" FROM cursos
+ORDER BY titulo ASC;
+```
+
+```sql
+SELECT nome, area_de_atuacao FROM professores
+WHERE cursos_id = 2 OR cursos_id = 1;
+```
+
 
 
