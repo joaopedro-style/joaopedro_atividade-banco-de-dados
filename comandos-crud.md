@@ -142,5 +142,17 @@ VALUES(
 );
 ```
 
+### Usando Comandos CRUD Para Consultas
+
+```sql
+SELECT nome, data_de_nacimento FROM alunos
+WHERE data_de_nacimento < '2009-01-01';
+```
+
+```sql
+SELECT nome, ROUND((AVG(primeira_nota + segunda_nota) / 2), 2) AS "Média das notas" FROM alunos
+GROUP BY nome;
+```
+
 
 
