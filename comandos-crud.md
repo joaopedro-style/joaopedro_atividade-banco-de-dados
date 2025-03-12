@@ -144,24 +144,35 @@ VALUES(
 
 ### Usando Comandos CRUD Para Consultas
 
+## Parte 1
 ```sql
 SELECT nome, data_de_nacimento FROM alunos
 WHERE data_de_nacimento < '2009-01-01';
 ```
 
+## Parte 2
 ```sql
 SELECT nome, ROUND((AVG(primeira_nota + segunda_nota) / 2), 2) AS "Média das notas" FROM alunos
 GROUP BY nome;
 ```
 
+## Parte 3
 ```sql
 SELECT titulo, carga_horaria, (carga_horaria * 0.25) AS "Limite de Faltas" FROM cursos
 ORDER BY titulo ASC;
 ```
 
+## Parte 4
 ```sql
 SELECT nome, area_de_atuacao FROM professores
 WHERE cursos_id = 2 OR cursos_id = 1;
+```
+
+## Parte 5
+```sql
+SELECT area_de_atuacao,COUNT(*) AS quantidades_de_professores FROM professores
+WHERE area_de_atuacao IN ('design','infra','desenvolvimento')
+GROUP BY area_de_atuacao;
 ```
 
 
