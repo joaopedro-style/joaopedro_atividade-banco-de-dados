@@ -175,5 +175,10 @@ WHERE area_de_atuacao IN ('design','infra','desenvolvimento')
 GROUP BY area_de_atuacao;
 ```
 
+## Parte 6
+```sql
+SELECT alunos.nome, cursos.titulo,cursos.carga_horaria FROM alunos
+JOIN cursos ON alunos.cursos_id = cursos.id;
+```
 
 
