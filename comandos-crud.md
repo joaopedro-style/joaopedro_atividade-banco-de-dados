@@ -208,4 +208,11 @@ GROUP BY cursos.id
 ORDER BY quantidades_de_alunos DESC;
 ```
 
+## parte 10
+```sql
+SELECT alunos.nome AS alunos,
+       alunos.primeira_nota, alunos.segunda_nota AS notas,
+       AVG(alunos.primeira_nota + alunos.segunda_nota) OVER 
+```
+
 
