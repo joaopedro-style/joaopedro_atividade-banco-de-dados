@@ -239,5 +239,14 @@ WHERE cursos_id = (SELECT id FROM cursos WHERE nome = 'UX/UI Design' LIMIT 1)
 LIMIT 1;
 ```
 
+## parte 13
+```sql
+SELECT alunos.nome AS alunos,
+       cursos.titulo AS cursos
+FROM alunos
+JOIN cursos ON alunos.cursos_id = cursos.id
+ORDER BY alunos.nome ASC;
+```
+
 
 
