@@ -211,8 +211,14 @@ ORDER BY quantidades_de_alunos DESC;
 ## parte 10
 ```sql
 SELECT alunos.nome AS alunos,
-       alunos.primeira_nota, alunos.segunda_nota AS notas,
-       AVG(alunos.primeira_nota + alunos.segunda_nota) OVER 
+alunos.primeira_nota,
+alunos.segunda_nota,
+ROUND((alunos.primeira_nota + alunos.segunda_nota)/2,2) AS medias,
+cursos.titulo AS cursos
+FROM alunos
+JOIN cursos ON alunos.cursos_id = cursos.id
+WHERE cursos.titulo IN ('Front-End','Back-End')
+ORDER BY alunos.nome;
 ```
 
 
