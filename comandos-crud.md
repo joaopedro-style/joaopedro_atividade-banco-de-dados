@@ -228,4 +228,11 @@ SET titulo = 'Adoble XD', carga_horaria = 15
 WHERE titulo = 'Figma' AND carga_horaria = 10;
 ```
 
+## parte 12
+```sql
+DELETE alunos FROM alunos
+WHERE id = 26 OR id = 24;
+```
+
+
 
