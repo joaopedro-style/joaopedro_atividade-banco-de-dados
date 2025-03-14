@@ -221,4 +221,11 @@ WHERE cursos.titulo IN ('Front-End','Back-End')
 ORDER BY alunos.nome;
 ```
 
+## parte 11
+```sql
+UPDATE cursos
+SET titulo = 'Adoble XD', carga_horaria = 15
+WHERE titulo = 'Figma' AND carga_horaria = 10;
+```
+
 
