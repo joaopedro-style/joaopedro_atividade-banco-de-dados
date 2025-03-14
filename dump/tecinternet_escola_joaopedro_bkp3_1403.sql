@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 14/03/2025 às 12:34
+-- Tempo de geração: 14/03/2025 às 18:09
 -- Versão do servidor: 10.4.32-MariaDB
 -- Versão do PHP: 8.2.12
 
@@ -43,16 +43,16 @@ CREATE TABLE `alunos` (
 --
 
 INSERT INTO `alunos` (`id`, `nome`, `data_de_nacimento`, `primeira_nota`, `segunda_nota`, `cursos_id`) VALUES
-(22, 'Joao Silva', '1998-05-15', 7.50, 8.00, 1),
-(23, 'Maria Oliveira', '1999-07-22', 9.00, 8.00, 2),
-(24, 'Carlos Santos', '1998-11-10', 6.50, 7.50, 3),
-(25, 'Ana Souza', '2001-02-05', 9.50, 9.00, 4),
-(26, 'Lucas Pereira', '2000-01-12', 7.50, 6.00, 5),
-(27, 'Beatriz Costa', '1997-05-28', 8.00, 7.00, 5),
-(28, 'Gabriel Almeida', '1999-09-19', 7.00, 8.50, 4),
-(29, 'Sofia Rodrigues', '2002-04-30', 9.00, 9.50, 3),
-(30, 'Pedro Lima', '1998-08-25', 6.00, 5.50, 2),
-(31, 'Laura Martins', '2000-12-14', 8.00, 8.50, 1);
+(1, 'Joao Silva', '1998-05-15', 7.50, 8.00, 1),
+(2, 'Maria Oliveira', '1999-07-22', 9.00, 8.00, 2),
+(3, 'Carlos Santos', '1998-11-10', 6.50, 7.50, 3),
+(4, 'Ana Souza', '2001-02-05', 9.50, 9.00, 4),
+(5, 'Lucas Pereira', '2000-01-12', 7.50, 6.00, 5),
+(6, 'Beatriz Costa', '1997-05-28', 8.00, 7.00, 5),
+(7, 'Gabriel Almeida', '1999-09-19', 7.00, 8.50, 4),
+(8, 'Sofia Rodrigues', '2002-04-30', 9.00, 9.50, 3),
+(9, 'Pedro Lima', '1998-08-25', 6.00, 5.50, 2),
+(10, 'Laura Martins', '2000-12-14', 8.00, 8.50, 1);
 
 -- --------------------------------------------------------
 
@@ -135,7 +135,7 @@ ALTER TABLE `professores`
 -- AUTO_INCREMENT de tabela `alunos`
 --
 ALTER TABLE `alunos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT de tabela `cursos`
