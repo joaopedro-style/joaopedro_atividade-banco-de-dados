@@ -231,12 +231,12 @@ WHERE titulo = 'Figma' AND carga_horaria = 10;
 ## parte 12
 ```sql
 DELETE FROM alunos
-WHERE cursos_id = (SELECT cursos_id FROM cursos WHERE nome = 'Redes de Computadores' LIMIT 1)
-LIMIT 1;
+WHERE cursos_id = (SELECT id FROM cursos WHERE titulo = 'Redes de Computadores' LIMIT 1)
+AND nome = 'Lucas Pereira';
 
 DELETE FROM alunos
-WHERE cursos_id = (SELECT cursos_id FROM cursos WHERE nome = 'UX/UI Design' LIMIT 1)
-LIMIT 1;
+WHERE cursos_id = (SELECT id FROM cursos WHERE titulo = 'UX/UI Design' LIMIT 1)
+AND nome = 'Sofia Rodrigues';
 ```
 
 ## parte 13
