@@ -248,5 +248,13 @@ JOIN cursos ON alunos.cursos_id = cursos.id
 ORDER BY alunos.nome ASC;
 ```
 
+## Desafio 1
+```sql
+SELECT nome,
+       data_de_nacimento,
+       TIMESTAMPDIFF(YEAR, data_de_nacimento, CURDATE()) AS idade
+FROM alunos;
+```
+
 
 
