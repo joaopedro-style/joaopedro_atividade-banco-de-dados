@@ -256,5 +256,13 @@ SELECT nome,
 FROM alunos;
 ```
 
+## Desafio 2
+```sql
+SELECT nome,
+       ROUND((primeira_nota + segunda_nota)/ 2,2) AS media
+FROM alunos
+HAVING media >= 7;
+```
+
 
 
