@@ -259,7 +259,7 @@ FROM alunos;
 ## Desafio 2
 ```sql
 SELECT nome,
-       ROUND((primeira_nota + segunda_nota)/ 2,2) AS media
+       ROUND((primeira_nota + segunda_nota)/2,2) AS media
 FROM alunos
 HAVING media >= 7;
 ```
@@ -267,9 +267,16 @@ HAVING media >= 7;
 ## Desafio 3
 ```sql
 SELECT nome,
-       ROUND((primeira_nota + segunda_nota)/ 2,2) AS media
+       ROUND((primeira_nota + segunda_nota)/2,2) AS media
 FROM alunos
 HAVING media < 7;
+```
+
+## Desafio 4
+```sql
+SELECT COUNT(*) AS quantidade_de_alunos
+FROM (SELECT (primeira_nota + segunda_nota)/2 AS media FROM alunos) AS medias_alunos
+WHERE media >= 7;
 ```
 
 
