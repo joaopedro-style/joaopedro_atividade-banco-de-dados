@@ -217,7 +217,7 @@ ROUND((alunos.primeira_nota + alunos.segunda_nota)/2,2) AS medias,
 cursos.titulo AS cursos
 FROM alunos
 JOIN cursos ON alunos.cursos_id = cursos.id
-WHERE cursos.titulo IN ('Front-End','Back-End')
+WHERE cursos.id IN (1,2)
 ORDER BY alunos.nome;
 ```
 
@@ -231,11 +231,11 @@ WHERE titulo = 'Figma' AND carga_horaria = 10;
 ## parte 12
 ```sql
 DELETE FROM alunos
-WHERE cursos_id = (SELECT id FROM cursos WHERE titulo = 'Redes de Computadores' LIMIT 1)
+WHERE cursos_id = 5
 AND nome = 'Lucas Pereira';
 
 DELETE FROM alunos
-WHERE cursos_id = (SELECT id FROM cursos WHERE titulo = 'UX/UI Design' LIMIT 1)
+WHERE cursos_id = 3
 AND nome = 'Sofia Rodrigues';
 ```
 
@@ -261,7 +261,7 @@ FROM alunos;
 SELECT nome,
        ROUND((primeira_nota + segunda_nota)/2,2) AS media
 FROM alunos
-HAVING media >= 7;
+WHERE ROUND((primeira_nota + segunda_nota)/2,2) >= 7;
 ```
 
 ## Desafio 3
@@ -269,14 +269,14 @@ HAVING media >= 7;
 SELECT nome,
        ROUND((primeira_nota + segunda_nota)/2,2) AS media
 FROM alunos
-HAVING media < 7;
+WHERE ROUND((primeira_nota + segunda_nota)/2,2) < 7;
 ```
 
 ## Desafio 4
 ```sql
 SELECT COUNT(*) AS quantidade_de_alunos
-FROM (SELECT (primeira_nota + segunda_nota)/2 AS media FROM alunos) AS medias_alunos
-WHERE media >= 7;
+FROM alunos
+WHERE (primeira_nota + segunda_nota) / 2 >= 7;
 ```
 
 
